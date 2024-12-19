@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <title>Backrooms lvl:21 Numbered Doors</title>
+  </head>
+  <body>
+    <div class="cover" id="vidCover">
+      <video id="introVideoPlayer" muted>
+        <source src="images/introCard.mp4" type="video/mp4" />
+      </video>
+    </div>
+
+    <div class="bar">
+      <div class="lvlBox center-content lightGrey" onclick="sequenceStart()">
+        <p class="text">LVLs</p>
+      </div>
+      <div class="lvlZone grey center-content">
+        <div class="lvl yellow border" id="lvlONE"></div>
+        <div class="lvl darkRed border" id="lvlTWO"></div>
+        <div class="lvl darkRed border" id="lvlTHREE"></div>
+        <div class="lvl darkRed border" id="lvlFOUR"></div>
+        <div class="lvl darkRed border" id="lvlFIVE"></div>
+        <div class="lvl darkRed border" id="lvlSIX"></div>
+        <div class="lvl darkRed border" id="lvlSEVEN"></div>
+      </div>
+      <div class="lvlDiff center-content lightGrey">
+        <p class="text" id="difficultyText">Difficulty: Easy</p>
+      </div>
+      <div class="timeZone center-content red" id="time">
+        <p class="timeText" id="timeText">10</p>
+      </div>
+    </div>
+    <div class="center-content game" id="gameZone"></div>
+    <div class="center-content vanish" id="gameZone2"></div>
+    <div class="center-content vanish" id="gameZone3"></div>
+    <div class="center-content vanish" id="gameZone4"></div>
+
+    <div class="modal" id="noteModal">
+      <span class="close" onclick="hideAnswerModal()">&times;</span>
+      <div class="center-content noteModal" id="noteModalBody"></div>
+    </div>
+
+    <div class="modal" id="exitModal">
+      <div class="modalBody center-content" id="ExitModalBody">
+        <img class="cover exitClick" src="images/door.png" onclick="leave()" />
+      </div>
+    </div>
+
+    <div class="modal" id="gameOverModal">
+      <div class="modalBody center-content" id="GameOverModalBody">
+        <video id="deathVideoPlayer" muted>
+          <source src="images/deathScreen.mp4" type="video/mp4" />
+        </video>
+      </div>
+    </div>
+
+    <button class="clickable" id="startButton">Click to Start</button>
+    <!-- Skip button -->
+    <button class="clickable vanish" id="skipButton">Skip Video</button>
+
+    <audio id="elevenDisc">
+      <source src="audio/elevenDisc.mp3" type="audio/mp3" />
+    </audio>
+    <script src="script.js"></script>
+    <script src="preload.js"></script>
+  </body>
+</html>

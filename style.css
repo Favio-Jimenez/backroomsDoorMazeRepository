@@ -1,0 +1,253 @@
+/*general settings*/
+body {
+  height: 100vh;
+  width: 100vw;
+  display: block;
+  margin: 0;
+  background-color: black;
+}
+img {
+  max-width: 100%;
+  max-height: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+/*text settings*/
+.text {
+  color: rgb(0, 0, 0);
+  font-family: cursive;
+  text-align: center;
+  font-size: 2vmax;
+}
+.timeText {
+  color: rgb(0, 0, 0);
+  font-family: cursive;
+  text-align: center;
+  font-size: 3vmax;
+}
+.border {
+  border-style: solid;
+  border-color: black;
+  border: 1%;
+}
+
+.center-content {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.vanish {
+  display: none;
+}
+/* div size */
+.bar {
+  height: 10%;
+  width: 100%;
+  display: flex;
+}
+
+.lvlBox {
+  height: 100%;
+  width: 15%;
+}
+
+.lvlZone {
+  height: 100%;
+  width: 50%;
+  display: flex;
+}
+
+.lvl {
+  height: 75%;
+  width: 10%;
+  margin: calc(100% / 99);
+}
+
+.lvlDiff {
+  height: 100%;
+  width: 20%;
+}
+
+.timeZone {
+  height: 100%;
+  width: 15%;
+}
+
+/*game zone sizes 1-4 */
+.game {
+  height: 90%;
+  width: 100%;
+  display: flex;
+}
+.gZ2 {
+  height: 45%;
+  width: 100%;
+  display: flex;
+}
+.gZ3 {
+  height: calc(90% / 3);
+  width: 100%;
+  display: flex;
+}
+.gZ4 {
+  height: calc(90% / 4);
+  width: 100%;
+  display: flex;
+}
+
+/* colors */
+.red {
+  background-color: rgb(255, 0, 0);
+}
+.darkRed {
+  background-color: rgb(131, 0, 0);
+}
+.yellow {
+  background-color: rgb(228, 205, 0);
+}
+.green {
+  background-color: rgb(0, 255, 0);
+}
+.black {
+  background-color: rgb(0, 0, 0);
+}
+.grey {
+  background-color: rgb(90, 90, 90);
+}
+.lightGrey {
+  background-color: rgb(150, 147, 147);
+}
+
+/* modal settings */
+.modal {
+  justify-content: center;
+  align-items: center;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  background-color: #1c1c1cab;
+  opacity: 1;
+}
+
+/* modal internal settings*/
+.modalBody {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  margin: 0;
+  font-size: 9vmax;
+  font-family: "Courier New", Courier, monospace;
+  text-align: center;
+}
+
+.noteModal {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-image: url(images/note.png);
+  max-height: 100%;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 95vh;
+  opacity: 1;
+  margin: 0;
+  font-size: 13vmax;
+  font-family: "Courier New", Courier, monospace;
+  text-align: center;
+}
+/* close button settings*/
+.close {
+  color: #aaaaaa;
+  position: fixed;
+  top: 1%;
+  right: 1%;
+  font-size: 100px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/*video settings*/
+.cover {
+  background-color: #000;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+}
+video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*cursor changes*/
+.clickable {
+  filter: grayscale(0%);
+}
+.clickable:hover {
+  cursor: pointer;
+}
+.clickable:active {
+  transform: scale(0.95);
+  filter: grayscale(40%);
+}
+.exitClick {
+  cursor: wait;
+}
+
+/*skip button settings*/
+#skipButton {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  padding: 10px 20px;
+  background-color: rgba(255, 0, 0, 0.7); /* Semi-transparent red */
+  color: white;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  z-index: 99999;
+}
+
+#skipButton:hover {
+  background-color: rgba(255, 0, 0, 1);
+}
+/*start button settings*/
+#startButton {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  padding: 10px 20px;
+  background-color: rgba(60, 255, 0, 0.7); /* Semi-transparent red */
+  color: white;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  z-index: 999999;
+}
+
+#startButton:hover {
+  background-color: rgb(60, 255, 0, 1);
+}
